@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskFlow — Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .navbar { background-color: #3c3489 !important; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark px-4">
+        <a class="navbar-brand fw-bold" href="dashboard.html"><i class="bi bi-kanban-fill me-2"></i>TaskFlow</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Tableau de bord</a></li>
+                <li class="nav-item"><a class="nav-link active" href="projects.html">Projets</a></li>
+                <li class="nav-item"><a class="nav-link" href="tasks.html">Tâches</a></li>
+            </ul>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-outline-light btn-sm" id="logoutBtn">Déconnexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Gestion des Projets</h2>
+        
+        <div class="card p-4 shadow-sm mb-4">
+            <h5 class="mb-3">Ajouter un nouveau projet</h5>
+            <form id="projectForm">
+                <input type="text" id="projectTitle" class="form-control mb-3" placeholder="Titre du projet" required>
+                <textarea id="projectDescription" class="form-control mb-3" rows="3" placeholder="Description"></textarea>
+                <button type="submit" class="btn btn-primary">Créer le projet</button>
+            </form>
+        </div>
+
+        <h4 class="mb-3">Mes Projets</h4>
+        <div id="projectsContainer" class="row g-3"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>
